@@ -1,5 +1,173 @@
-<html>
-  <body>
-    <h1>Thank you for submitting</h1>
-  </body>
-</html>
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+  <!-- HTML -->
+  
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#title {
+  font-family: 'Asap', sans-serif;
+  font-size: 50px;
+  color: white;
+}
+
+#description {
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-family: 'Asap', sans-serif;
+  color: white;
+}
+
+.form {
+  border: 1px solid hsl(208, 82%, 25%);
+  position: absolute;
+  left: 34vw;
+  padding: 40px;
+  top: 5vw;
+  border-radius: 5px;
+  background: hsl(208, 82%, 25%);
+  box-shadow: 5px 10px 30px 5px black;
+  opacity: 0.95;
+}
+
+form {
+  font-family: 'Asap', sans-serif;
+}
+
+label {
+  font-size: 25px;
+  color: white;
+}
+
+#name,
+#email,
+#number,
+#dropdown {
+  width: 600px;
+  height: 50px;
+  font-size: 20px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  font-family: 'Asap', sans-serif;
+  margin-top: 10px;
+}
+
+#dropdown {
+  background: white;
+}
+
+#gender {
+  margin-top: 10px;
+}
+
+.checkbox {
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+textarea {
+  width: 550px;
+  height: 200px;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 5px;
+  font-family: 'Asap', sans-serif;
+}
+
+button {
+  width: 590px;
+  height: 50px;
+  background: hsl(109, 99%, 35%);
+  border-color: hsl(109, 99%, 35%);
+  font-family: 'Asap', sans-serif;
+  font-size: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  color: white;
+  background: linear-gradient(hsl(109, 99%, 35%), hsl(109, 99%, 25%));
+}
+
+button:hover {
+  background: linear-gradient(hsl(109, 99%, 25%), hsl(109, 99%, 35%));
+}
+
+@media only screen and (max-width: 600px) {
+  .form {
+    width: 500px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+  }
+}
+
+
+
+
+  </style>
+</head>
+
+<body style="background-image: url('https://i2.wp.com/9to5google.com/wp-content/uploads/sites/4/2020/09/made_by_canvas_11.png?ssl=1&resize=1999%2C1999');">
+  <!-- Project -->
+  <script src="main.js"></script>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  
+  
+  <title> </title>
+  <div class="form">
+    <div id="header">
+      <h1 id="title">Survey Form</h1>
+      <p id="description">Thank you for taking this survey</p>
+    </div>
+  <form id="survey-form" action="https://thiccoder3.github.io">
+  <label id="name-label" for="name">Name<br>
+    <input type="text" id="name" name="name" value="" required placeholder="Name"><br>
+  </label>
+  <label id="email-label" for="email">Email<br>
+    <input type="email" name="email" id="email" value="" required placeholder="Email"><br>
+  </label>
+  <label id="number-label" for="number">Age (optional)<br>
+    <input type="number" name="age" id="number" value="" min="1" max="100" placeholder="age"><br>
+  </label>
+  <label for="feelings" id="feeling">How are you feeling today?</label><br>
+    <select id="dropdown" name="feelings" placeholder="select" required>
+      <option value="" disable selected>Select your option</option>
+      <option value="great">Great!</option>
+      <option value="somewhat-great">Somewhat great</option>
+      <option value="fine">Fine</option>
+      <option value="little-down">A little down</option>
+      <option value="rough">I had a rough day :(</option>
+    </select><br>
+    <label for="gender" id="gender">Choose your gender<br>
+      <input type="radio" name="gender" id="gender" value="male" required>male<br>
+      <input type="radio" name="gender" id="gender" value="female" required>female<br>
+    </label>
+    <br>
+  </label>
+    
+    <label id="availible" for="availible">When are you availible? (optional)<br>
+    <input type="checkbox" value="morning"  name="availible" class="checkbox" value=""> Morning<br>
+    <input type="checkbox" value="noon"  name="availible" class="checkbox" value="noon"> Noon<br>
+    <input type="checkbox" value="afternoon"  name="availible" class="checkbox" value="afternoon"> Afternoon <br>
+    <input type="checkbox" value="evening"  name="availible" class="checkbox" value="evening"> Evening<br>
+    <input type="checkbox" value="none" name="availible" class="checkbox" value="none"> None of the above
+    </label>
+    <br>
+    <textarea id="comment" name="comment" placeholder="your comments here (optional)"></textarea><br>
+    <button type="submit" id="submit">Submit</button>
+  </form>
+  </div>
